@@ -1,0 +1,502 @@
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="preconnect" href="https://static.leetcode-cn.com"><link rel="preconnect" href="https://assets.leetcode-cn.com"><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/styles.1bc525e6.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-components.4e768a9b.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-modules.6436bc17.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-assets.dfd58495.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-main.d90352fc.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/main.86c38ffb.css" as="style" onload='this.onload=null,this.setAttribute("rel","stylesheet")'><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/runtime~main.ea5eca78.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/styles.1bc525e6.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-dls.cbca2f09.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-components.4e768a9b.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-modules.6436bc17.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-schema.9d158cb1.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-i18n.3d091c9b.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-track.2f51a077.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-common.f65b9cfd.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-assets.dfd58495.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-main.d90352fc.js"><link rel="preload" as="script" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/main.86c38ffb.js"><title>力扣</title><script>window.prerenderReady=!1</script><script>!function(){var e;(e=document.createElement("link").relList)&&e.supports&&e.supports("preload")||document.querySelectorAll('link[rel="preload"][as="style"]').forEach((function(e){e.onload=null,e.setAttribute("rel","stylesheet")}))}()</script><style>[id=app]{min-height:100%;display:flex;flex-direction:column}</style></head><body><script>!function(){const t="lc-dark-side",c=localStorage.getItem(t);c&&document.body.classList.add(c)}()</script><style id="initial-loading-style">body{--initial-loading-bg:#FFF;--initial-loading-bounce-bg:#999}body.dark{--initial-loading-bg:#1C1C1C;--initial-loading-bounce-bg:#8A8A8A}#initial-loading{position:fixed;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:var(--initial-loading-bg);transition:opacity .6s;z-index:100}#initial-loading[data-is-hide=true]{opacity:0;pointer-events:none}#initial-loading .spinner{display:flex}#initial-loading .bounce{width:18px;height:18px;margin:0 3px;background:var(--initial-loading-bounce-bg);border-radius:100%;display:inline-block;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both}#initial-loading .bounce:nth-child(1){-webkit-animation-delay:-.32s;animation-delay:-.32s}#initial-loading .bounce:nth-child(2){-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}</style><div id="initial-loading"><div class="spinner"><div class="bounce"></div><div class="bounce"></div><div class="bounce"></div></div></div><div id="app"></div><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/runtime~main.ea5eca78.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/styles.1bc525e6.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-dls.cbca2f09.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-components.4e768a9b.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-modules.6436bc17.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-schema.9d158cb1.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-i18n.3d091c9b.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-track.2f51a077.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-common.f65b9cfd.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-assets.dfd58495.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/noj-main.d90352fc.js"></script><script src="https://static.leetcode-cn.com/cn-mono-assets/production/main/main.86c38ffb.js"></script><script>if(!/prerender/i.test(navigator.userAgent)&&/leetcode-cn\.com/.test(window.location.href)){var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?fa218a3ff7179639febdb15e372f411c";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}(),function(){var e=document.createElement("script");e.src="https://www.googletagmanager.com/gtag/js?id=UA-131851415-1";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t),e.onload=function(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-131851415-1")}}()}</script><noscript><img src="https://certify.alexametrics.com/atrk.gif?account=tIUcs1Y1Mn20Io" style="display:none" height="1" width="1" alt=""/></noscript>
+  <!-- HOTFIX MONO -->
+<!-- Please don't modify previous line -->
+
+<style>
+.header__2ao3 .css-rrr7do.enw8myh0 {
+  font-weight: bold;
+}
+.css-krdt1t-CompanyWrapper.e1pqqowu3 img {
+  border: none;
+}
+.css-20btl1-RefillButton.edy4jpc4 {
+  font-weight: bold;
+}
+
+
+/* Hide LC contributors */
+.container__35eI .label__1TJ4 {
+  color: transparent !important;
+}
+
+.container__35eI .label__1TJ4::before {
+  display: inline-block;
+  content: "© 版权所有";
+  color: #757575 !important;
+}
+
+
+  @media (max-width: 480px) {
+    .css-ltfb8i {
+      width: calc(100% - 50px);
+    }
+  }
+
+  /*Aliplayer*/
+  .css-1oksl2q {
+    filter: brightness(0.97);
+  }
+  .prism-player-container__ZsEP {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  }
+  .prism-player .prism-liveshift-progress .prism-progress-played,
+  .prism-player .prism-progress .prism-progress-played {
+    background-color: #029975;
+  }
+  .prism-player .prism-controlbar .prism-controlbar-bg {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+  .prism-cc-btn {
+    display: none;
+  }
+  .prism-volume {
+    margin-right: 15px !important;
+  }
+  .prism-player .prism-volume,
+  .prism-player .prism-setting-btn {
+    transform: scale(0.8);
+  }
+
+  .prism-player .prism-tooltip,
+  .prism-thumbnail img ~ span {
+    border-radius: 10px;
+    line-height: 19px;
+    height: 20px;
+    padding: 0 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Circle hide date */
+  [class*="ArticleRowWrapper"] [class*="PublishDate"],
+  [class*="DiscussionRowWrapper"] [class*="PublishDate"] {
+    display: none;
+  }
+
+  /* Monaco */
+  /*[class*="containerCls"] {
+    border-left: 1px solid #eee;
+  }*/
+
+  /* TS beta */
+  [data-cypress="LanguageSelector-TypeScript"] {
+    position: relative;
+  }
+  [data-cypress="LanguageSelector-TypeScript"]::after {
+    content: "beta";
+    position: absolute;
+    font-size: 10px;
+    font-weight: 400;
+    color: rgb(245, 0, 87);
+    top: -3px;
+    right: 1px;
+  }
+  
+
+  .btns__3jf0 > .tool-item__39Vq:first-child {
+    position: relative;
+  }
+  .btns__3jf0 > .tool-item__39Vq:first-child::after {
+    content: "新";
+    font-weight: bold;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: rgb(245, 0, 87);
+    font-size: 12px;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: 600px) {
+    .css-6ku2ay-OwnershipWrapper {
+      flex-direction: column;
+      line-height: 38px;
+    }
+  }
+
+  #circle-article #lc-header {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    border-bottom: none;
+  }
+  [class*="ghost-xs-Btn-ShortcutButton"][data-type="video"] {
+    position: relative;
+    color: #009975;
+  }
+  [class*="ghost-xs-Btn-ShortcutButton"][data-type="video"]::after {
+    content: "视频";
+    display: block;
+    color: rgb(245, 0, 87);
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    transform: scale(0.8);
+  }
+
+/* 6.18 event start */
+/* [class*="NavContainer"] [class*="NavbarListItem"]:nth-child(8)::after {
+  content: "6.18";
+  display: block;
+  position: absolute;
+  color: white;
+  background: red;
+  padding: 2px 4px;
+  border-radius: 4px;
+  line-height: 12px;
+  top: -12px;
+  right: -6px;
+  font-size: 12px;
+  transform: scale(0.8);
+}
+
+.ant-dropdown-menu-item a[href*="youzan"] {
+  position: relative;
+}
+
+.ant-dropdown-menu-item a[href*="youzan"]::after {
+  content: "new";
+  display: block;
+  position: absolute;
+  color: white;
+  background: red;
+  padding: 2px 4px;
+  border-radius: 4px;
+  line-height: 12px;
+  top: -6px;
+  right: -10px;
+  font-size: 12px;
+  transform: scale(0.8);
+} */
+/* 6.18 event end */
+</style>
+
+<script>
+  if (window.location.pathname.includes("/circle/article")) {
+    document.querySelector("body").id = "circle-article";
+  }
+
+  // dynamic script
+  function addCoins(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function () {
+        addCoins(selector);
+      }, 100);
+    } else {
+      document.querySelector(selector).innerHTML =
+        document.querySelector(selector).innerHTML +
+        `
+  (<span style="color: orange">
+  +50 <img src="https://static.leetcode-cn.com/cn-legacy-assets/images/coin.gif" width="12" style="transform: translateY(-2px);" />
+  </span>)
+  <style>
+  button[class*="BaseButton-Contribute"] {
+    color: rgb(0, 153, 117);
+  }
+  </style>
+  `;
+    }
+  }
+
+  if (window.location.pathname.includes("/tag/")) {
+    addCoins('span[class*="BtnContent"]');
+  }
+
+  if (window.location.pathname.includes("/company/")) {
+    addCoins('button[class*="BaseButton-Contribute"]');
+  }
+</script>
+
+<!--@START: New Feature Tag -->
+<script type="text/javascript">
+  var stroageItemShowNew = "1395607";
+  var stroageItemShowNewVersion = "v1";
+  var showNewFt = localStorage.getItem(
+    stroageItemShowNew + stroageItemShowNewVersion
+  );
+
+  function closeNewFt() {
+    localStorage.setItem(stroageItemShowNew + stroageItemShowNewVersion, true);
+    document.querySelector("#lc_navbar #new-ft").remove();
+  }
+
+  var newFt =
+    '<a href="https://support.leetcode-cn.com/user/login/?request=%2Fhc%2Fkb%2Farticle%2F' +
+    stroageItemShowNew +
+    '%2F" onclick="closeNewFt()" target="_blank">\
+    <img src="https://assets.leetcode-cn.com/support/new.svg" />\
+    </a>';
+
+  // dynamic script
+  function applyNewFt(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function () {
+        applyNewFt(selector);
+      }, 100);
+    } else {
+      console.log("Found!");
+      var newFtDiv = document.createElement("div");
+      newFtDiv.innerHTML = newFt;
+      newFtDiv.id = "new-ft";
+      document.querySelector(selector).appendChild(newFtDiv);
+    }
+  }
+
+  if (showNewFt == null) {
+    applyNewFt('[class*="NavWrapper"] [class*="NavContainer"]');
+  }
+</script>
+
+<style>
+  #new-ft img {
+    width: 48px;
+  }
+  #new-ft {
+    transition: all 0.2s;
+    cursor: pointer;
+    position: absolute;
+    z-index: 800;
+    top: -10px;
+    right: 400px;
+  }
+  #new-ft:hover {
+    top: -5px;
+  }
+  @media (max-width: 767px) {
+    #new-ft {
+      right: 60px;
+    }
+  }
+  [class*="NavWrapper"] [class*="NavContainer"] {
+    position: relative;
+  }
+</style>
+<!--@END: New Feature Tag -->
+
+<!--@START: Nav Highlight Tag -->
+<style>
+  [class*="NavbarListItem"] {
+    position: relative;
+  }
+  [class*="NavbarListItem"] > a {
+    position: relative;
+  }
+  [class*="NavbarListItem"] > a[href="/contest/"]::after {
+    display: none;
+    font-size: 12px;
+    background: rgba(236, 64, 122, 1);
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    font-weight: 500;
+    transform: scale(0.6);
+    content: "力扣杯";
+    color: white;
+    height: 20px;
+    width: 46px;
+    text-align: center;
+    border-radius: 100px;
+  }
+</style>
+<!--@END: Nav Highlight Tag -->
+
+<style>
+  a.header-anchor {
+    display: none;
+  }
+</style>
+
+<script>
+  if (/discuss.lingkou.com/.test(location.href)) {
+    __runForLingkouDotCom();
+  }
+
+  function __runForLingkouDotCom() {
+    function findSocial(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function () {
+          findSocial(selector);
+        }, 100);
+      } else {
+        document.querySelector(selector).style.display = "none";
+      }
+    }
+    findSocial(".css-3hcwga-NavbarMenuItem:nth-child(6)");
+
+    // dynamic script
+    function findFooter(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function () {
+          findFooter(selector);
+        }, 100);
+      } else {
+        document.querySelector(selector).innerHTML =
+          '<div><ul class="css-3fea3i-CnLicensingWrapper e5i1odf0"><li><a href="http://www.miitbeian.gov.cn">沪ICP备18019787号</a></li><li><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007802">沪公网安备31011502007802号</a></li><li><a href="http://www.shjbzx.cn/">上海市互联网违法和不良信息举报中心</a></li><li><a href="http://report.12377.cn:13225/toreportinputNormal_anis.do">中国互联网违法和不良信息举报中心</a></li></ul></div>';
+      }
+    }
+    findFooter(".css-3fea3i-CnLicensingWrapper.e5i1odf0");
+  }
+</script>
+<script>
+  // dynamic script
+  function findpager(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function () {
+        document.body.classList.remove("shared-ws-collage");
+        findpager(selector);
+      }, 100);
+    } else {
+      setTimeout(function () {
+        document.body.classList.add("shared-ws-collage");
+        findpager(selector);
+      }, 100);
+    }
+  }
+  if (window.location.href.includes("?college=")) {
+    findpager('#ranking button[type="primary"][data-page="1"]');
+  }
+</script>
+<style>
+  .shared-ws-collage
+    div[class*="PopularityRankInner"]
+    .ant-table-wrapper
+    .ant-table-tbody
+    > tr:first-child {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .shared-ws-collage
+    div[class*="PopularityRankInner"]
+    .ant-table-wrapper
+    .ant-table-tbody
+    > tr
+    * {
+    background: none;
+  }
+  .shared-ws-collage
+    div[class*="PopularityRankInner"]
+    .ant-table-wrapper
+    .ant-table-tbody
+    > tr:first-child
+    > td {
+    border-bottom: none;
+  }
+  .shared-ws-collage
+    div[class*="PopularityRankInner"]
+    .ant-table-wrapper
+    .ant-table-tbody
+    > tr:first-child {
+    height: 50px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .shared-ws-collage
+      div[class*="PopularityRankInner"]
+      .ant-table-body::before {
+      content: " ";
+      display: block;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
+      height: 40px;
+      margin-bottom: -75px;
+    }
+    .shared-ws-collage
+      div[class*="PopularityRankInner"]
+      .college-contest-popularity-share {
+      padding-top: 5px;
+    }
+  }
+  @media screen and (min-width: 993px) {
+    .shared-ws-collage
+      div[class*="PopularityRankInner"]
+      .ant-table-body::before {
+      content: " ";
+      display: block;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0px 5px rgba(0, 0, 0, 0.15);
+      height: 50px;
+      margin-bottom: -50px;
+    }
+  }
+</style>
+
+<script>
+  var currLocation = window.location.pathname;
+  if (
+    currLocation.includes("/charon/tag") &&
+    currLocation.match(/gs\/[0-9]+/g) == null
+  ) {
+    document.body.classList.add("charon-tag");
+    var newMeta = document.createElement("meta");
+    newMeta.setAttribute("name", "apple-mobile-web-app-capable");
+    newMeta.setAttribute("content", "yes");
+    document.getElementsByTagName("head")[0].appendChild(newMeta);
+  }
+</script>
+<style>
+  @media screen and (max-width: 736px) {
+    .charon-tag #lc-home > div:first-child {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 737px) {
+    .charon-tag #lc-content > div {
+      max-width: 100%;
+    }
+    .charon-tag #lc-content > div:first-child > div:first-child {
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      z-index: 100;
+    }
+
+    .charon-tag #lc-content {
+      margin-top: 35px;
+    }
+
+    .charon-tag .ant-pagination.ant-table-pagination {
+      position: fixed;
+      bottom: 10px;
+      padding: 10px;
+      padding-right: 0px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      right: 50%;
+      transform: translateX(50%);
+      background: white;
+    }
+    .charon-tag #lc-footer {
+      height: 80px;
+    }
+    .charon-tag #lc-footer *,
+    .charon-tag #lc-header {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // dynamic script
+  function findContestHosts(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function () {
+        findContestHosts(selector);
+      }, 100);
+    } else {
+      document.querySelector(selector).innerText = "领扣网络（上海）有限公司";
+    }
+  }
+  if (window.location.pathname.includes("/contest/college/2019-spring")) {
+    findContestHosts(".css-1fzgbam-OwnershipCompanyTitle");
+  }
+</script>
+
+</body></html>
